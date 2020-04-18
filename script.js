@@ -49,6 +49,30 @@ label.appendChild(document.createTextNode('Special Characters'));
 checkBox4.appendChild(checkbox4); 
 checkBox4.appendChild(label);
 
+//randomlower function
+function getRandomLower() {
+  return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
+}
+console.log(getRandomLower());
+
+
+//randomUpper function
+function getRandomUpper() {
+  return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
+}
+console.log(getRandomUpper())
+
+//randomNumber function
+function getRandomNumber() {
+  return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
+}
+console.log(getRandomNumber())
+
+//randomSpecial function
+function getRandomSpecial() {
+  return String.fromCharCode(Math.floor(Math.random() * 14) + 33);
+}
+console.log(getRandomSpecial());
 
 // var lowercaseCheckbox = document.querySelector('#lowercaseCheckbox')
 
