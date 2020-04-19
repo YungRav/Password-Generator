@@ -36,7 +36,7 @@ const randomFunc = {
   lower: getRandomLower,
   upper: getRandomUpper,
   number: getRandomNumber,
-  symbol: getRandomSpecial
+  special: getRandomSpecial
 };
 
 //generate event listen
@@ -73,14 +73,34 @@ function generatePassword(lower, upper, number, special, length) {
     typesArr.forEach(type => {
       const funcName = Object.keys(type)[0];
 
-      generatePassword += randomFunc[funcName];
+      generatePassword += randomFunc[funcName]();
+      console.log(generatePassword)
     });
   }
 
   const finalPassword = generatePassword.slice(0, length)
 
+  //shuffle string
+  //function getRandomInt(n) {
+   // return Math.floor(Math.random() * n);
+  //}
+  //function shuffle(finalPassword) {
+    //var arr = finalPassword.split('');
+    //var n = arr.length;
+
+    //for(var i=0; i<n-1; ++i){
+     // var j = getRandomInt(n);
+      
+      //  var temp = arr[i];
+      //  arr[i] = arr[j];
+     //   arr[j] = temp;
+  //  }
+  //}
+ // finalPassword = arr.join('');
   return finalPassword;
   
+  
+ 
 };
 
 // Assignment Code
@@ -118,3 +138,6 @@ function generatePassword(lower, upper, number, special, length) {
 
 // Add event listener to generate button
 //generateBtn.addEventListener("click", writePassword);
+
+
+//
